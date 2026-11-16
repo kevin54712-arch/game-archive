@@ -1,0 +1,192 @@
+[
+  {
+    "id": "hollow-knight",
+    "title": "Hollow Knight",
+    "slug": "hollow-knight",
+    "genres": [
+      "動作",
+      "冒險"
+    ],
+    "summary": "深入古老的地下王國，在手繪世界中探索、戰鬥與揭開秘密。",
+    "developer": "Team Cherry",
+    "releaseDate": "2017-02-24",
+    "releaseNote": "原版 PC 首次正式發行日期",
+    "platforms": [
+      "PC",
+      "Nintendo Switch",
+      "PlayStation",
+      "Xbox"
+    ],
+    "playerModes": [
+      "單人"
+    ],
+    "cover": "assets/images/hollow-knight.svg",
+    "page": "pages/hollow-knight.html",
+    "intro": "在《Hollow Knight》中，玩家將走進名為聖巢（Hallownest）的古老地下王國。蜿蜒洞穴、廢棄城市與形形色色的昆蟲居民，構成一個充滿謎團的世界。旅途中需要穿越不同區域，尋找新的通道與能力，並面對各具招式的敵人。遊戲以探索與環境敘事為主，讓玩家逐步拼湊王國的過去。這是一段重視觀察、反覆嘗試與路線探索的冒險。",
+    "gameplay": [
+      "在相互連通的 2D 地圖中探索，隨著取得能力返回先前無法通過的區域。",
+      "以近距離攻擊、跳躍和閃避應對敵人，並透過實戰熟悉頭目招式。",
+      "利用護符等系統調整能力組合，選擇適合自己的探索和戰鬥節奏。"
+    ],
+    "highlights": [
+      {
+        "title": "連結式探索地圖",
+        "description": "不同場景彼此連結，捷徑與隱藏區域鼓勵玩家回訪。"
+      },
+      {
+        "title": "手繪 2D 美術",
+        "description": "以精細的場景與角色動畫塑造地下王國的氛圍。"
+      },
+      {
+        "title": "節奏明確的戰鬥",
+        "description": "頭目戰需要觀察攻擊模式並練習移動時機。"
+      },
+      {
+        "title": "環境式敘事",
+        "description": "透過場景、對話與細節逐漸理解世界，而非一次講完全部故事。"
+      }
+    ],
+    "personalReview": null,
+    "sources": [
+      {
+        "label": "Steam 官方商店頁｜發售日、開發商與玩法",
+        "url": "https://store.steampowered.com/app/367520/Hollow_Knight/"
+      },
+      {
+        "label": "Team Cherry 官方網站",
+        "url": "https://www.teamcherry.com.au/"
+      }
+    ]
+  },
+  {
+    "id": "stardew-valley",
+    "title": "Stardew Valley",
+    "slug": "stardew-valley",
+    "genres": [
+      "模擬",
+      "角色扮演"
+    ],
+    "summary": "接手一座老農場，耕作、釣魚、採礦，慢慢打造自己的鄉村生活。",
+    "developer": "ConcernedApe（Eric Barone）",
+    "releaseDate": "2016-02-26",
+    "releaseNote": "PC 版首次正式發行日期",
+    "platforms": [
+      "PC",
+      "Nintendo Switch",
+      "PlayStation",
+      "Xbox",
+      "行動裝置"
+    ],
+    "playerModes": [
+      "單人",
+      "多人（依平台）"
+    ],
+    "cover": "assets/images/stardew-valley.svg",
+    "page": "pages/stardew-valley.html",
+    "intro": "《Stardew Valley》從一塊繼承而來的農地開始。玩家可以清理雜草、種植作物、照顧動物，也能前往小鎮認識居民，安排自己的日常生活。除了農場經營，遊戲還包含釣魚、採礦、探索與節慶活動；隨著季節推移，不同作物和事件也會改變可做的事情。沒有固定的單一路線，玩家可以依照喜好決定發展重點，逐步建立心目中的農場。",
+    "gameplay": [
+      "依季節規劃農作物，澆水、收成並運用所得擴充農場設備。",
+      "探索礦坑、蒐集材料、釣魚及製作物品，形成多種日常目標。",
+      "與村民互動、參加節慶，並依個人節奏安排生活與農場經營。"
+    ],
+    "highlights": [
+      {
+        "title": "自由的農場經營",
+        "description": "農地配置、作物選擇與發展順序都能依照喜好調整。"
+      },
+      {
+        "title": "四季生活節奏",
+        "description": "季節、天氣和節日讓每一段農場生活都有不同安排。"
+      },
+      {
+        "title": "多樣的日常活動",
+        "description": "種田之外，還有釣魚、採礦、製作與小鎮互動。"
+      },
+      {
+        "title": "長期成長目標",
+        "description": "工具、設備與農場逐漸升級，讓遊玩過程持續累積成果。"
+      }
+    ],
+    "personalReview": null,
+    "sources": [
+      {
+        "label": "Stardew Valley 官方 FAQ｜開發者與發售日",
+        "url": "https://www.stardewvalley.net/faq/"
+      },
+      {
+        "label": "Stardew Valley 官方 Press Kit｜平台與玩法",
+        "url": "https://www.stardewvalley.net/press/"
+      },
+      {
+        "label": "Steam 官方商店頁",
+        "url": "https://store.steampowered.com/app/413150/Stardew_Valley/"
+      }
+    ]
+  },
+  {
+    "id": "minecraft",
+    "title": "Minecraft",
+    "slug": "minecraft",
+    "genres": [
+      "沙盒",
+      "生存",
+      "冒險"
+    ],
+    "summary": "在由方塊構成的世界中收集資源、建造作品，或與朋友一起探索。",
+    "developer": "Mojang Studios",
+    "releaseDate": "2011-11-18",
+    "releaseNote": "Java Edition 1.0 完整版發行日期；早期測試版於 2009 年公開",
+    "platforms": [
+      "PC",
+      "Nintendo Switch",
+      "PlayStation",
+      "Xbox",
+      "行動裝置"
+    ],
+    "playerModes": [
+      "單人",
+      "多人"
+    ],
+    "cover": "assets/images/minecraft.svg",
+    "page": "pages/minecraft.html",
+    "intro": "《Minecraft》是一款以方塊構成世界的沙盒遊戲。玩家能挖掘材料、製作工具，將想像中的建築一步步放進地圖，也能穿越洞穴、山脈與其他地形展開冒險。生存模式重視資源蒐集、建造庇護所與應對敵對生物；創造模式則提供更多自由，讓玩家專注於設計與搭建。世界可以由個人探索，也可以透過多人模式與朋友合作，玩法與目標由玩家自行決定。",
+    "gameplay": [
+      "在生存模式中蒐集資源、合成工具、管理食物並建造安全的居所。",
+      "在創造模式中使用大量方塊進行建築、景觀或機關設計。",
+      "探索不同生態域與地下空間，並可依版本、平台與設定進行多人合作。"
+    ],
+    "highlights": [
+      {
+        "title": "高度自由的沙盒世界",
+        "description": "不限定單一通關流程，建造、探索和冒險能依喜好安排。"
+      },
+      {
+        "title": "資源與合成系統",
+        "description": "材料蒐集與工具製作形成循序漸進的生存體驗。"
+      },
+      {
+        "title": "創造與生存模式",
+        "description": "不同模式分別強調自由建築與資源管理。"
+      },
+      {
+        "title": "多人協作",
+        "description": "可與其他玩家共同建造、探索，具體連線方式依版本與平台而異。"
+      }
+    ],
+    "personalReview": null,
+    "sources": [
+      {
+        "label": "Minecraft 官方介紹｜玩法、模式與支援平台",
+        "url": "https://www.minecraft.net/zh-hant/about-minecraft"
+      },
+      {
+        "label": "Minecraft 官方介紹（英文）｜版本發展",
+        "url": "https://www.minecraft.net/en-us/about-minecraft"
+      },
+      {
+        "label": "Minecraft Wiki｜Java Edition 正式發行日期",
+        "url": "https://minecraft.wiki/w/Java_Edition"
+      }
+    ]
+  }
+]

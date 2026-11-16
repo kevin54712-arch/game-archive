@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101822">
+  <meta name="description" content="Game Archive｜綜合遊戲圖鑑。探索不同類型的遊戲，快速了解玩法、特色與基本資訊。">
+  <title>Game Archive｜綜合遊戲圖鑑</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body data-page="home" data-root="">
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="Game Archive 首頁"><span class="brand-symbol" aria-hidden="true">▦</span><span>GAME<span class="brand-em">/</span>ARCHIVE</span></a>
+      <nav class="main-nav" aria-label="主要導覽"><a class="nav-active" href="index.html" aria-current="page">探索首頁</a><a href="#library">遊戲圖鑑</a><a href="#about">關於本站</a></nav>
+      <span class="nav-status"><span class="status-dot"></span> NOW EXPLORING</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT GAME STARTS HERE</div>
+        <h1 id="hero-title">發現下一場<br><span class="hero-accent">值得投入的冒險。</span></h1>
+        <p>從獨立冒險到自由建造，整理遊戲最值得認識的玩法與特色。跳過無止境的列表，從這裡開始探索。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#library">探索遊戲 <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#about">認識 Game Archive <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-stats"><div><strong id="stat-games">03</strong><span>收錄遊戲</span></div><span class="stat-divider"></span><div><strong id="stat-genres">07</strong><span>遊戲分類</span></div><span class="stat-divider"></span><div><strong>100%</strong><span>持續擴充設計</span></div></div>
+      </div>
+      <div class="hero-visual" aria-label="精選遊戲概念圖">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="featured-frame"><img src="assets/images/hollow-knight.svg" width="720" height="960" alt="Hollow Knight 原創抽象主題插畫"><span class="frame-corner frame-corner-tl"></span><span class="frame-corner frame-corner-br"></span></div>
+        <div class="featured-caption"><span class="featured-label">EDITOR'S PICK / 001</span><strong>HOLLOW KNIGHT</strong><span>一段走進未知的探索旅程</span></div>
+        <span class="visual-index" aria-hidden="true">GA—001</span>
+      </div>
+    </section>
+
+    <div class="marquee-line" aria-hidden="true"><div class="container marquee-inner"><span>DISCOVER</span><b>✦</b><span>EXPLORE</span><b>✦</b><span>PLAY</span><b>✦</b><span>COLLECT STORIES</span><b>✦</b><span>DISCOVER</span></div></div>
+
+    <section class="catalog-section container" id="library" aria-labelledby="library-title">
+      <div class="section-heading"><div><div class="eyebrow small-eyebrow">THE LIBRARY / 遊戲資料庫</div><h2 id="library-title">探索遊戲<span class="heading-period">.</span></h2><p>依照名稱搜尋，或從不同遊戲類型開始尋找。</p></div><div class="section-index">ARCHIVE <span id="archive-count">001—003</span></div></div>
+      <div class="filter-panel">
+        <label class="search-box" for="game-search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg><input id="game-search" type="search" placeholder="搜尋遊戲名稱..." autocomplete="off"><kbd>/</kbd></label>
+        <div class="filter-heading"><span>依類型篩選</span><span id="result-count" aria-live="polite">正在載入...</span></div>
+        <div id="genre-filters" class="filter-chips" role="group" aria-label="遊戲類型篩選"><span class="loading-hint">正在載入分類...</span></div>
+      </div>
+      <div id="game-grid" class="game-grid" aria-live="polite"><div class="loading-panel">正在載入遊戲資料...</div></div>
+      <div id="empty-state" class="empty-state" hidden><span class="empty-icon">⌕</span><h3>找不到符合條件的遊戲</h3><p>試試其他名稱，或切換不同分類。</p><button id="reset-filters" class="button button-outline" type="button">清除篩選</button></div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title"><div class="container about-inner"><div><div class="eyebrow small-eyebrow">BUILT TO GROW</div><h2 id="about-title">一個可以持續<br>成長的遊戲圖鑑<span class="heading-period">.</span></h2></div><div class="about-copy"><p>Game Archive 是一個獨立的遊戲介紹練習專案，以客觀資料、清楚的遊戲分類與一致的頁面設計為核心。</p><p>每款新遊戲都遵循同一份 <code>AGENTS.md</code> 開發規範：建立介紹、更新資料、驗證連結，讓整個網站能維持一致並持續擴充。</p><span class="about-note">非 Steam 或遊戲開發商官方網站 · 主視覺為本站原創概念插畫</span></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand brand-footer" href="index.html"><span class="brand-symbol" aria-hidden="true">▦</span><span>GAME<span class="brand-em">/</span>ARCHIVE</span></a><span>DISCOVER MORE. PLAY YOUR WAY.</span><span>© 2026 GAME ARCHIVE · 學習專案</span></div></footer>
+  <noscript><div class="no-js">本網站需要 JavaScript 載入遊戲清單與搜尋功能，請在瀏覽器中啟用 JavaScript。</div></noscript>
+</body>
+</html>
