@@ -20,7 +20,7 @@
     "playerModes": [
       "單人"
     ],
-    "cover": "assets/images/hollow-knight.svg",
+    "cover": "https://images.squarespace-cdn.com/content/v1/606d159a953867291018f801/7dc1dbea-b5fc-4c8f-8768-1a5c3ede53e3/HK_header.jpg",
     "page": "pages/hollow-knight.html",
     "intro": "在《Hollow Knight》中，玩家將走進名為聖巢（Hallownest）的古老地下王國。蜿蜒洞穴、廢棄城市與形形色色的昆蟲居民，構成一個充滿謎團的世界。旅途中需要穿越不同區域，尋找新的通道與能力，並面對各具招式的敵人。遊戲以探索與環境敘事為主，讓玩家逐步拼湊王國的過去。這是一段重視觀察、反覆嘗試與路線探索的冒險。",
     "gameplay": [
@@ -56,7 +56,15 @@
         "label": "Team Cherry 官方網站",
         "url": "https://www.teamcherry.com.au/"
       }
-    ]
+    ],
+    "fallbackCover": "assets/images/hollow-knight.svg",
+    "coverAttribution": {
+      "label": "Hollow Knight 官方網站宣傳圖片",
+      "author": "Team Cherry",
+      "sourceUrl": "https://www.hollowknight.com/",
+      "usage": "官方提供媒體素材供遊戲介紹與媒體報導使用；本網站為非官方、非營利的原創遊戲介紹，仍須遵守 Team Cherry 的規範",
+      "policyUrl": "https://www.teamcherry.com.au/faq"
+    }
   },
   {
     "id": "stardew-valley",
@@ -121,7 +129,9 @@
         "label": "Steam 官方商店頁",
         "url": "https://store.steampowered.com/app/413150/Stardew_Valley/"
       }
-    ]
+    ],
+    "fallbackCover": "assets/images/stardew-valley.svg",
+    "coverAttribution": null
   },
   {
     "id": "minecraft",
@@ -147,7 +157,7 @@
       "單人",
       "多人"
     ],
-    "cover": "assets/images/minecraft.svg",
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Minecraft_-_1.18_mountains.jpg",
     "page": "pages/minecraft.html",
     "intro": "《Minecraft》是一款以方塊構成世界的沙盒遊戲。玩家能挖掘材料、製作工具，將想像中的建築一步步放進地圖，也能穿越洞穴、山脈與其他地形展開冒險。生存模式重視資源蒐集、建造庇護所與應對敵對生物；創造模式則提供更多自由，讓玩家專注於設計與搭建。世界可以由個人探索，也可以透過多人模式與朋友合作，玩法與目標由玩家自行決定。",
     "gameplay": [
@@ -187,6 +197,16 @@
         "label": "Minecraft Wiki｜Java Edition 正式發行日期",
         "url": "https://minecraft.wiki/w/Java_Edition"
       }
-    ]
+    ],
+    "fallbackCover": "assets/images/minecraft.svg",
+    "coverAttribution": {
+      "label": "Minecraft - 1.18 mountains（遊戲實際畫面）",
+      "author": "Xbox México",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Minecraft_-_1.18_mountains.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "usage": "以 CSS object-fit: cover 裁切顯示；Wikimedia Commons 頁面註記原始影片之 CC BY 授權尚待人工審核，若授權狀態變更須撤換",
+      "policyUrl": "https://www.minecraft.net/en-us/usage-guidelines"
+    }
   }
 ]

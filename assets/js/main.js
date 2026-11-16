@@ -18,7 +18,7 @@
   };
   const clear = node => node.replaceChildren();
   const textDate = date => /^\d{4}-\d{2}-\d{2}$/.test(date || '') ? date.replace(/-/g, '.') : '待確認';
-  const webPath = path => root + path;
+  const webPath = path => /^https:\/\//i.test(path || '') ? path : root + path;
   const tags = (genres, target) => {
     genres.forEach(genre => target.append(el('span', 'genre-tag', genre)));
   };
@@ -35,11 +35,11 @@
     const figure = el('div', 'game-card-img');
     const img = el('img');
     img.src = webPath(game.cover || 'assets/images/placeholder.svg');
-    img.alt = `${game.title} 的本站原創概念插畫`;
+    img.alt = game.coverAttribution ? `${game.title} 實際遊戲宣傳或畫面，來源請見介紹頁` : `${game.title} 的本站自製概念插畫`;
     img.loading = 'lazy';
     img.width = 720;
     img.height = 960;
-    img.addEventListener('error', () => { if (!img.src.endsWith('/placeholder.svg')) img.src = imageFallback; }, {once:true});
+    img.addEventListener('error', () => { img.src = webPath(game.fallbackCover || 'assets/images/placeholder.svg'); }, {once:true});
     figure.append(img, el('span', 'card-number', `GA / ${String(number).padStart(3, '0')}`));
     const body = el('div', 'card-body');
     const titleRow = el('div', 'card-title-row');
@@ -140,8 +140,8 @@
     setText('detail-index', `/ ${String(games.indexOf(game) + 1).padStart(3,'0')}`);
     const cover = document.getElementById('detail-cover');
     cover.src = webPath(game.cover);
-    cover.alt = `${game.title} 的本站原創概念插畫`;
-    cover.addEventListener('error', () => { cover.src = imageFallback; }, {once:true});
+    cover.alt = game.coverAttribution ? `${game.title} 遊戲官方宣傳或實際遊戲畫面` : `${game.title} 的本站自製概念插畫`;
+    cover.addEventListener('error', () => { cover.src = webPath(game.fallbackCover || 'assets/images/placeholder.svg'); }, {once:true});
     const genreRow = document.getElementById('detail-tags');
     clear(genreRow);
     tags(game.genres, genreRow);
@@ -189,6 +189,21 @@
       li.append(link);
       sources.append(li);
     });
+    if (game.coverAttribution) {
+      const c = game.coverAttribution;
+      const credit = el('li');
+      const imgLink = el('a', '', `圖片來源：${c.label}（${c.author}） ↗`);
+      safeExternal(imgLink, c.sourceUrl);
+      credit.append(imgLink);
+      if (c.license && c.licenseUrl) {
+        credit.append(document.createTextNode(' · '));
+        const licenseLink = el('a', '', c.license);
+        safeExternal(licenseLink, c.licenseUrl);
+        credit.append(licenseLink);
+      }
+      if (c.usage) credit.append(el('span', 'source-notice', `｜${c.usage}`));
+      sources.append(credit);
+    }
     const mainSource = document.getElementById('detail-source-link');
     mainSource.textContent = '參考來源 ↗';
     if (game.sources.length) safeExternal(mainSource, game.sources[0].url);

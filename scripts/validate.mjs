@@ -36,7 +36,12 @@ for (const [index,g] of (Array.isArray(games) ? games : []).entries()) {
   ids.add(g.id); slugs.add(g.slug);
   if (g.page !== `pages/${g.slug}.html`) warn(`${id}：page 與 slug 不一致`);
   if (typeof g.page === 'string' && !exists(g.page)) warn(`${id}：找不到介紹頁 ${g.page}`);
-  if (typeof g.cover === 'string' && !exists(g.cover)) warn(`${id}：找不到圖片 ${g.cover}`);
+  if (typeof g.cover === 'string') {
+    if (/^https:\/\//i.test(g.cover)) {
+      if (!g.coverAttribution?.sourceUrl || !g.coverAttribution?.author) warn(`${id}：外部圖片須提供 coverAttribution 作者與來源`);
+      if (typeof g.fallbackCover !== 'string' || !exists(g.fallbackCover)) warn(`${id}：外部圖片須提供有效本地 fallbackCover`);
+    } else if (!exists(g.cover)) warn(`${id}：找不到圖片 ${g.cover}`);
+  }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(g.releaseDate || '') || Number.isNaN(Date.parse(g.releaseDate))) warn(`${id}：releaseDate 日期格式無效`);
   if (typeof g.intro === 'string' && g.intro.length < 60) warn(`${id}：intro 過短`);
   if ((g.highlights || []).length < 3 || (g.highlights || []).length > 5) warn(`${id}：highlights 必須有 3～5 項`);

@@ -101,7 +101,9 @@ game-archive/
 | `releaseNote` | string | 發行日期涵蓋哪個版本的說明 |
 | `platforms` | string[] | 主要支援平台，避免把跨版本差異混為一談 |
 | `playerModes` | string[] | 單人、多人等；平台差異需標示 |
-| `cover` | string | 相對於專案根目錄的有效圖片路徑 |
+| `cover` | string | 專案根目錄的有效圖片路徑，或經核對使用權的 HTTPS 圖片 URL |
+| `fallbackCover` | string | 有效的本地備援圖片路徑，避免外部圖片失效 |
+| `coverAttribution` | object/null | 真實圖片的作者、來源、使用或授權條件；自製圖片可為 null |
 | `page` | string | `pages/<slug>.html` |
 | `intro` | string | 客觀簡介，目標約 100～200 個中文字 |
 | `gameplay` | string[] | 主要遊玩方式，至少 2 段 |
@@ -112,7 +114,7 @@ game-archive/
 資料約束：
 
 - `id` / `slug` 不重複且為 `^[a-z0-9]+(?:-[a-z0-9]+)*$`。
-- `page` 必須等於 `pages/<slug>.html`；圖片與對應頁面要真實存在。
+- `page` 必須等於 `pages/<slug>.html`；圖片若是本地路徑須存在，若是 HTTPS 連結須記錄來源與使用依據，且備援 SVG 須存在。
 - `genres` 使用統一的詞彙，例如「動作」、「冒險」、「角色扮演」、「模擬」、「沙盒」、「生存」。
 - 同樣資訊不應分別維護多份；頁面 UI 從同一份 JSON 取得內容。
 - 遊戲資料需先查證，優先官方開發者網站或官方商店；無法查證的必要資訊應先回報，**不可猜造**。
@@ -169,7 +171,7 @@ game-archive/
 **資料**
 
 - [ ] JSON 語法與資料 schema 正確，沒有重複 id / slug。
-- [ ] 所有 `cover`、`page` 路徑實際存在；詳細頁 slug 與資料一致。
+- [ ] 所有本地 `cover` 與 `fallbackCover`、`page` 路徑實際存在，外部圖片網址與授權依據有記錄；詳細頁 slug 與資料一致。
 - [ ] 必填欄位、資料來源與內容未虛構。
 - [ ] 未提供心得時 `personalReview: null`，該區塊不顯示。
 
@@ -195,3 +197,11 @@ game-archive/
 初始收錄：`Hollow Knight`、`Stardew Valley`、`Minecraft`。它們都必須使用一致的模板、共用樣式及 JSON 資料。
 
 未來的 AI 應能只根據「新增一款遊戲」加上可查證的資訊與本文件，完成規劃、頁面建立、資料整合與驗收，而無須使用者每次重講專案規則。
+
+## 圖片來源補充規範（v1.1）
+
+- 優先使用權利人明確允許之官方媒體圖、具可確認授權的遊戲截圖；使用條件不清時保留自製插畫。
+- 外部圖片可以用 HTTPS URL，但必須有 `fallbackCover` 本地備援；**不得認為單純標註來源就等於獲得授權**。
+- `coverAttribution` 必須記錄作者、來源網址、授權或可使用的理由。來源與實際使用條件必須記錄於 `IMAGE_CREDITS.md`。
+- 若 Commons 的授權仍待審核，應明確標註風險，並優先改採自己拍攝的遊戲截圖。
+- 每次新增遊戲，必須檢查圖片外部連結與備援圖，避免首頁及詳細頁破圖；無權使用素材時不強行使用。
